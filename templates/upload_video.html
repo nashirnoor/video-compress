@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video</title>
+</head>
+<body>
+    <h1>Upload Video</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="title">Video Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="video">Video File:</label>
+        <input type="file" id="video" name="video" accept="video/*" required><br><br>
+        
+        <input type="submit" value="Upload Video">
+    </form>
+</body>
+</html>
